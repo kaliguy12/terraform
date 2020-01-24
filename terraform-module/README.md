@@ -50,7 +50,6 @@ cd ghost
 Create main.tf:
 
 vi main.tf
-main.tf:
 
 resource "docker_image" "ghost_image" {
   name = "${var.image_name}"
@@ -68,7 +67,6 @@ resource "docker_container" "ghost_container" {
 Create variables.tf:
 
 vi variables.tf
-variables.tf:
 
 #Define variables
 variable "image_name" {}
@@ -77,7 +75,6 @@ variable "ext_port" {}
 Create outputs.tf:
 
 vi outputs.tf
-outputs.tf:
 
 #Output the IP Address of the Container
 output "ip" {
@@ -92,7 +89,6 @@ Create main.tf: Change back to the user directory.
 
 cd ~/
 vi main.tf
-main.tf:
 
 module "ghost" {
   source             = "./ghost"
@@ -103,7 +99,6 @@ module "ghost" {
 Create variables.tf:
 
 vi variables.tf
-variables.tf:
 
 #Define variables
 variable "image_name" {
@@ -123,7 +118,6 @@ variable "ext_port" {
 Create outputs.tf:
 
 vi outputs.tf
-outputs.tf:
 
 #Output the IP Address of the Container
 output "ip" {
