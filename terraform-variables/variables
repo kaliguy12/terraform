@@ -1,0 +1,10 @@
+ A friend wants to set up a blog and we’ve decided to help out. Our friend wants to use Ghost blog which is a lightweight blogging platform written in Node.js. Seeing it as a useful offering toyour customers, we've decided to create a reusable Terraform file to deploy Ghost blog.
+
+Create main.tf:
+Now we can initialize Terraform: terraform init
+Execute terraform plan:
+terraform plan -out=tfplan \
+-var 'container_name=ghost_blog1' \
+-var 'image_name=ghost:alpine' \
+-var 'ext_port=8080'
+Apply the plan: terraform apply tfplan
